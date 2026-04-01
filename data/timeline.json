@@ -1,0 +1,20 @@
+[
+  {
+    "date": "2022-11-16",
+    "title": "Artemis I - Запуск",
+    "description": "Перший непілотований випробувальний політ ракети SLS та корабля Orion.",
+    "imageUrl": "https://images-assets.nasa.gov/image/ksc-20221116-ph-KLS01_0001/ksc-20221116-ph-KLS01_0001~thumb.jpg"
+  },
+  {
+    "date": "2022-12-11",
+    "title": "Artemis I - Повернення",
+    "description": "Космічний корабель Orion успішно приводнився в Тихому океані після 25-денної місії навколо Місяця.",
+    "imageUrl": "https://images-assets.nasa.gov/image/jsc2022e088383/jsc2022e088383~thumb.jpg"
+  },
+  {
+    "date": "2023-04-03",
+    "title": "Artemis II - Оголошення екіпажу",
+    "description": "NASA та Канадське космічне агентство оголосили імена чотирьох астронавтів, які першими облетять Місяць за понад 50 років: Рейд Уайзмен, Віктор Гловер, Крістіна Кох та Джеремі Гансен.",
+    "imageUrl": "https://images-assets.nasa.gov/image/NHQ202304030026/NHQ202304030026~thumb.jpg"
+  }
+]

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Місія Артеміда (Artemis) | Хронологія та Мультимедіа</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <nav class="navbar">
+        <div class="logo">ARTEMIS<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Місія</a></li>
+            <li><a href="#status">Статус</a></li>
+            <li><a href="#timeline">Хронологія</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+        </ul>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Повернення на Місяць.</h1>
+            <h2>Підготовка до Марсу.</h2>
+            <p>Програма <strong>Artemis</strong> — це наступний крок людства у вивченні космосу. За допомогою інноваційних технологій ми побудуємо стійку присутність на Місяці для подальшого стрибка.</p>
+            <div class="cta-buttons">
+                <a href="#timeline" class="btn primary-btn">Історія місії</a>
+                <a href="#gallery" class="btn secondary-btn">Жива галерея</a>
+            </div>
+        </div>
+        <div class="hero-graphic">
+            <div class="moon"></div>
+            <div class="orbit"></div>
+            <div class="capsule"></div>
+        </div>
+    </header>
+
+    <section id="status" class="status-section">
+        <div class="container">
+            <h2 class="section-title">Наступний Етап</h2>
+            <div class="status-card glassmorphism">
+                <div class="status-info">
+                    <h3>Artemis II</h3>
+                    <p>Перший пілотований обліт Місяця за більш ніж півстоліття.</p>
+                    <div class="crew-tags">
+                        <span class="tag">Віктор Гловер</span>
+                        <span class="tag">Рейд Уайзмен</span>
+                        <span class="tag">Крістіна Кох</span>
+                        <span class="tag">Джеремі Гансен</span>
+                    </div>
+                </div>
+                <div class="countdown" id="countdown">
+                    <div class="time-box">
+                        <span id="cd-days" class="time-num">--</span>
+                        <span class="time-label">Днів</span>
+                    </div>
+                    <div class="time-box">
+                        <span id="cd-hours" class="time-num">--</span>
+                        <span class="time-label">Годин</span>
+                    </div>
+                    <div class="time-box">
+                        <span id="cd-mins" class="time-num">--</span>
+                        <span class="time-label">Хвилин</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Хронологія Місії</h2>
+            <p class="section-subtitle">Журнал активностей, що автоматично поповнюється новими подіями з NASA (зберігається вічно).</p>
+            <div class="timeline" id="timeline-container">
+                <!-- Timeline items will be injected here via app.js -->
+                <div class="loading-state">Завантаження історичних даних...</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Жива Галерея (NASA API)</h2>
+            <p class="section-subtitle">Останні мультимедійні дамплені з відкритих баз даних NASA за тегом "Artemis".</p>
+            <div class="gallery-grid" id="gallery-container">
+                <!-- Gallery items will be injected here via app.js -->
+                <div class="loading-state">Зв'язок з серверами NASA...</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="glass-footer">
+        <div class="container">
+            <p>Створено для відстеження місії <strong>Artemis</strong> з любов'ю до космосу.</p>
+            <p class="small-text">Дані надано відкритими API NASA. Архівування здійснюється автоматизовано.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
