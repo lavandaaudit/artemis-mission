@@ -1,0 +1,33 @@
+name: Artemis Daily Status Update
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Run at midnight UTC every day
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-timeline:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Run data fetch script
+        run: node scripts/fetch_daily.js
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Artemis Bot"
+          git add data/timeline.json
+          git commit -m "chore: Automate daily Artemis timeline update" || echo "No changes to commit"
+          git push
