@@ -1,11 +1,5 @@
 [
   {
-    "date": "2021-07-09",
-    "title": "Автоматичне оновлення місії",
-    "description": "Artemis Logo RGB",
-    "imageUrl": "https://images-assets.nasa.gov/image/Artemis Logo Color Positive RGB-July 2021/Artemis Logo Color Positive RGB-July 2021~medium.jpg"
-  },
-  {
     "date": "2022-11-16",
     "title": "Artemis I - Запуск",
     "description": "Перший непілотований випробувальний політ ракети SLS та корабля Orion.",
@@ -22,5 +16,10 @@
     "title": "Artemis II - Оголошення екіпажу",
     "description": "NASA та Канадське космічне агентство оголосили імена чотирьох астронавтів, які першими облетять Місяць за понад 50 років: Рейд Уайзмен, Віктор Гловер, Крістіна Кох та Джеремі Гансен.",
     "imageUrl": "https://images-assets.nasa.gov/image/NHQ202304030026/NHQ202304030026~thumb.jpg"
+  },
+  {
+    "date": "2026-04-01",
+    "title": "Artemis II - Запуск",
+    "description": "Космічний корабель Orion з чотирма астронавтами на борту успішно стартував за допомогою потужної ракети SLS. Екіпаж вирушив у історичну місію обльоту Місяця."
   }
 ]

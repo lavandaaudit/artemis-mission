@@ -33,6 +33,14 @@
             </div>
         </div>
         <div class="hero-graphic">
+            <div class="tracker-ui glassmorphism">
+                <h3>ACORE Real-Time Tracker</h3>
+                <div class="tracker-stats">
+                    <div class="stat"><span class="label">Швидкість:</span> <span class="val" id="tk-speed">0 км/год</span></div>
+                    <div class="stat"><span class="label">Відстань:</span> <span class="val" id="tk-dist">0 км</span></div>
+                    <div class="stat"><span class="label">Траєкторія:</span> <span class="val" id="tk-traj">Розрахунок...</span></div>
+                </div>
+            </div>
             <div class="moon"></div>
             <div class="orbit"></div>
             <div class="capsule"></div>
@@ -71,17 +79,6 @@
         </div>
     </section>
 
-    <section id="timeline" class="timeline-section">
-        <div class="container">
-            <h2 class="section-title">Хронологія Місії</h2>
-            <p class="section-subtitle">Журнал активностей, що автоматично поповнюється новими подіями з NASA (зберігається вічно).</p>
-            <div class="timeline" id="timeline-container">
-                <!-- Timeline items will be injected here via app.js -->
-                <div class="loading-state">Завантаження історичних даних...</div>
-            </div>
-        </div>
-    </section>
-
     <section id="gallery" class="gallery-section">
         <div class="container">
             <h2 class="section-title">Жива Галерея (NASA API)</h2>
@@ -89,6 +86,40 @@
             <div class="gallery-grid" id="gallery-container">
                 <!-- Gallery items will be injected here via app.js -->
                 <div class="loading-state">Зв'язок з серверами NASA...</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="live-data" class="live-data-section">
+        <div class="container">
+            <h2 class="section-title">Оперативні Дані</h2>
+            <p class="section-subtitle">Офіційні новини місії та метеорологічні умови на стартовому майданчику.</p>
+            
+            <div class="live-grid">
+                <div class="news-widget glassmorphism">
+                    <h3>Останні Новини NASA</h3>
+                    <div id="news-container">
+                        <div class="loading-state">Зчитування RSS стрічки...</div>
+                    </div>
+                </div>
+                
+                <div class="weather-widget glassmorphism">
+                    <h3>Космічна Погода (NOAA)</h3>
+                    <div id="weather-container">
+                        <div class="loading-state">Аналіз сонячної активності...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Хронологія Місії</h2>
+            <p class="section-subtitle">Журнал активностей, що автоматично поповнюється новими подіями з NASA (зберігається вічно).</p>
+            <div class="timeline" id="timeline-container">
+                <!-- Timeline items will be injected here via app.js -->
+                <div class="loading-state">Завантаження історичних даних...</div>
             </div>
         </div>
     </section>
