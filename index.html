@@ -6,6 +6,7 @@
     <title>Місія Артеміда (Artemis) | Хронологія та Мультимедіа</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
 <body>
@@ -16,8 +17,7 @@
         <div class="logo">ARTEMIS<span>.</span></div>
         <ul class="nav-links">
             <li><a href="#hero">Місія</a></li>
-            <li><a href="#status">Статус</a></li>
-            <li><a href="#timeline">Хронологія</a></li>
+            <li><a href="#map-section">Карта Місяця</a></li>
             <li><a href="#gallery">Галерея</a></li>
         </ul>
     </nav>
@@ -34,11 +34,11 @@
         </div>
         <div class="hero-graphic">
             <div class="tracker-ui glassmorphism">
-                <h3>ACORE Real-Time Tracker</h3>
+                <h3>Місяць — Real-Time</h3>
                 <div class="tracker-stats">
-                    <div class="stat"><span class="label">Швидкість:</span> <span class="val" id="tk-speed">0 км/год</span></div>
-                    <div class="stat"><span class="label">Відстань:</span> <span class="val" id="tk-dist">0 км</span></div>
-                    <div class="stat"><span class="label">Траєкторія:</span> <span class="val" id="tk-traj">Розрахунок...</span></div>
+                    <div class="stat"><span class="label">Освітленість:</span> <span class="val" id="tk-illum">0%</span></div>
+                    <div class="stat"><span class="label">Відстань:</span> <span class="val" id="tk-dist">384,400 км</span></div>
+                    <div class="stat"><span class="label">Фаза:</span> <span class="val" id="tk-phase">Розрахунок...</span></div>
                 </div>
             </div>
             <div class="moon"></div>
@@ -47,35 +47,13 @@
         </div>
     </header>
 
-    <section id="status" class="status-section">
+
+
+    <section id="map-section" class="map-section">
         <div class="container">
-            <h2 class="section-title">Наступний Етап</h2>
-            <div class="status-card glassmorphism">
-                <div class="status-info">
-                    <h3>Artemis II</h3>
-                    <p>Перший пілотований обліт Місяця за більш ніж півстоліття.</p>
-                    <div class="crew-tags">
-                        <span class="tag">Віктор Гловер</span>
-                        <span class="tag">Рейд Уайзмен</span>
-                        <span class="tag">Крістіна Кох</span>
-                        <span class="tag">Джеремі Гансен</span>
-                    </div>
-                </div>
-                <div class="countdown" id="countdown">
-                    <div class="time-box">
-                        <span id="cd-days" class="time-num">--</span>
-                        <span class="time-label">Днів</span>
-                    </div>
-                    <div class="time-box">
-                        <span id="cd-hours" class="time-num">--</span>
-                        <span class="time-label">Годин</span>
-                    </div>
-                    <div class="time-box">
-                        <span id="cd-mins" class="time-num">--</span>
-                        <span class="time-label">Хвилин</span>
-                    </div>
-                </div>
-            </div>
+            <h2 class="section-title">Карта Посадок Місяця</h2>
+            <p class="section-subtitle">Інтерактивна супутникова мапа з місіями "Аполлон" та зоною посадки Artemis III.</p>
+            <div id="lunar-map" class="glassmorphism"></div>
         </div>
     </section>
 
@@ -85,7 +63,13 @@
             <p class="section-subtitle">Останні мультимедійні дамплені з відкритих баз даних NASA за тегом "Artemis".</p>
             <div class="gallery-grid" id="gallery-container">
                 <!-- Gallery items will be injected here via app.js -->
-                <div class="loading-state">Зв'язок з серверами NASA...</div>
+                <div class="loading-state">
+                    <svg viewBox="0 0 100 100" width="80" height="80" style="animation: pulse-red 1.5s infinite alternate;">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="#45A29E" stroke-width="4"/>
+                        <circle cx="50" cy="50" r="15" fill="#45A29E" />
+                        <path d="M 10 50 Q 50 10 90 50 Q 50 90 10 50" fill="none" stroke="#ff2a2a" stroke-width="2"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -113,16 +97,7 @@
         </div>
     </section>
 
-    <section id="timeline" class="timeline-section">
-        <div class="container">
-            <h2 class="section-title">Хронологія Місії</h2>
-            <p class="section-subtitle">Журнал активностей, що автоматично поповнюється новими подіями з NASA (зберігається вічно).</p>
-            <div class="timeline" id="timeline-container">
-                <!-- Timeline items will be injected here via app.js -->
-                <div class="loading-state">Завантаження історичних даних...</div>
-            </div>
-        </div>
-    </section>
+
 
     <footer class="glass-footer">
         <div class="container">
@@ -131,6 +106,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
